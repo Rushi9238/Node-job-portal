@@ -1,2 +1,205 @@
-<h1>Welcome to the Job Portal</h1>
-<p>This is the Job page.</p>
+    <!-- Jobs Page Content -->
+    <main class="jobs-page">
+        <div class="container">
+            <div class="jobs-layout">
+                <!-- Sidebar Filters -->
+                <aside class="jobs-sidebar">
+                    <div class="filter-header">
+                        <h2 class="filter-title">Job filters</h2>
+                        <button class="clear-filters">Clear all</button>
+                    </div>
+
+                    <div class="filter-group">
+                        <h3 class="filter-group-title">Date posted</h3>
+                        <div class="filter-options">
+                            <label class="filter-option">
+                                <input type="radio" name="date" value="24h">
+                                <span class="filter-label">Past 24 hours</span>
+                            </label>
+                            <label class="filter-option">
+                                <input type="radio" name="date" value="3d">
+                                <span class="filter-label">Past 3 days</span>
+                            </label>
+                            <label class="filter-option">
+                                <input type="radio" name="date" value="week" checked>
+                                <span class="filter-label">Past week</span>
+                            </label>
+                            <label class="filter-option">
+                                <input type="radio" name="date" value="month">
+                                <span class="filter-label">Past month</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="filter-group">
+                        <h3 class="filter-group-title">Experience level</h3>
+                        <div class="filter-options">
+                            <label class="filter-option">
+                                <input type="checkbox" name="experience" value="internship">
+                                <span class="filter-label">Internship</span>
+                            </label>
+                            <label class="filter-option">
+                                <input type="checkbox" name="experience" value="entry" checked>
+                                <span class="filter-label">Entry level</span>
+                            </label>
+                            <label class="filter-option">
+                                <input type="checkbox" name="experience" value="associate" checked>
+                                <span class="filter-label">Associate</span>
+                            </label>
+                            <label class="filter-option">
+                                <input type="checkbox" name="experience" value="mid">
+                                <span class="filter-label">Mid-Senior level</span>
+                            </label>
+                        </div>
+                    </div>
+                </aside>
+
+                <!-- Main Content -->
+                <div class="jobs-main">
+                    <!-- Search Bar -->
+                    <div class="jobs-search">
+                        <div class="search-fields">
+                            <div class="search-field">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                    <path d="M9 17A8 8 0 1 0 9 1a8 8 0 0 0 0 16zM17 17l-4-4" stroke="#6b7280" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                <input type="text" placeholder="Search job titles or keywords" class="job-search-input">
+                            </div>
+                            <div class="search-field">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                    <path d="M10 2C7.79 2 6 3.79 6 6c0 3.5 4 8 4 8s4-4.5 4-8c0-2.21-1.79-4-4-4z" stroke="#6b7280" stroke-width="2"/>
+                                    <circle cx="10" cy="6" r="2" stroke="#6b7280" stroke-width="2"/>
+                                </svg>
+                                <input type="text" placeholder="Location" class="location-input">
+                            </div>
+                        </div>
+                        <button class="jobs-search-btn">Search</button>
+                    </div>
+
+                    <!-- Results Header -->
+                    <div class="results-header">
+                        <div class="results-count">235 jobs found</div>
+                        <div class="sort-options">
+                            <label for="sort">Sort by:</label>
+                            <select id="sort" class="sort-select">
+                                <option value="relevant">Most relevant</option>
+                                <option value="recent">Most recent</option>
+                                <option value="salary">Highest salary</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Job Listings -->
+                    <div class="job-listings">
+                        <div class="job-listing" onclick="window.location.href='/job/1'">
+                            <div class="job-listing-header">
+                                <div class="company-logo google-logo">G</div>
+                                <div class="job-meta">
+                                    <div class="job-listing-title">Senior Frontend Developer</div>
+                                    <div class="company-name">Google</div>
+                                    <div class="job-location">📍 Gurgaon HR IND Remote</div>
+                                </div>
+                                <div class="job-actions">
+                                    <button class="save-job">Save</button>
+                                    <button class="view-job">
+                                        <a href="/job/1">View</a>
+                                    </button>
+                                </div>
+                            </div>
+                            
+                            <div class="job-details-row">
+                                <span class="job-detail">💼 3 - 5 years</span>
+                                <span class="job-detail salary">💰 ₹14 - ₹20L per year</span>
+                                <span class="job-detail employees">👥 190,000+ employees</span>
+                                <span class="easy-apply">Easy Apply</span>
+                            </div>
+                            
+                            <div class="job-skills">
+                                <span class="skill-tag">REACT</span>
+                                <span class="skill-tag">Node.js</span>
+                                <span class="skill-tag">JS</span>
+                                <span class="skill-tag">SQL</span>
+                                <span class="skill-tag">MongoDB</span>
+                                <span class="skill-tag">Express</span>
+                                <span class="skill-tag">AWS</span>
+                            </div>
+                            
+                            <div class="job-footer">
+                                <span class="job-posted">19/5/2025, 5:02:01 pm • 127 applicants</span>
+                            </div>
+                        </div>
+
+                        <div class="job-listing">
+                            <div class="job-listing-header">
+                                <div class="company-logo facebook-logo">f</div>
+                                <div class="job-meta">
+                                    <div class="job-listing-title">Angular Developer</div>
+                                    <div class="company-name">Facebook</div>
+                                    <div class="job-location">📍 Bangalore Remote</div>
+                                </div>
+                                <div class="job-actions">
+                                    <button class="save-job">Save</button>
+                                    <button class="view-job">View</button>
+                                </div>
+                            </div>
+                            
+                            <div class="job-details-row">
+                                <span class="job-detail">💼 2 - 4 years</span>
+                                <span class="job-detail salary">💰 ₹12 - ₹18L per year</span>
+                                <span class="job-detail employees">👥 50,000+ employees</span>
+                                <span class="easy-apply">Easy Apply</span>
+                            </div>
+                            
+                            <div class="job-skills">
+                                <span class="skill-tag">Angular</span>
+                                <span class="skill-tag">TypeScript</span>
+                                <span class="skill-tag">RxJS</span>
+                                <span class="skill-tag">HTML</span>
+                                <span class="skill-tag">CSS</span>
+                                <span class="skill-tag">JavaScript</span>
+                            </div>
+                            
+                            <div class="job-footer">
+                                <span class="job-posted">18/5/2025, 3:15:22 pm • 89 applicants</span>
+                            </div>
+                        </div>
+
+                        <div class="job-listing">
+                            <div class="job-listing-header">
+                                <div class="company-logo microsoft-logo">⊞</div>
+                                <div class="job-meta">
+                                    <div class="job-listing-title">Full Stack Developer</div>
+                                    <div class="company-name">Microsoft</div>
+                                    <div class="job-location">📍 Hyderabad Remote</div>
+                                </div>
+                                <div class="job-actions">
+                                    <button class="save-job">Save</button>
+                                    <button class="view-job">View</button>
+                                </div>
+                            </div>
+                            
+                            <div class="job-details-row">
+                                <span class="job-detail">💼 3 - 6 years</span>
+                                <span class="job-detail salary">💰 ₹16 - ₹25L per year</span>
+                                <span class="job-detail employees">👥 220,000+ employees</span>
+                                <span class="easy-apply">Easy Apply</span>
+                            </div>
+                            
+                            <div class="job-skills">
+                                <span class="skill-tag">.NET</span>
+                                <span class="skill-tag">C#</span>
+                                <span class="skill-tag">Azure</span>
+                                <span class="skill-tag">SQL Server</span>
+                                <span class="skill-tag">React</span>
+                                <span class="skill-tag">TypeScript</span>
+                            </div>
+                            
+                            <div class="job-footer">
+                                <span class="job-posted">17/5/2025, 1:45:10 pm • 156 applicants</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
